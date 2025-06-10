@@ -73,6 +73,7 @@ UI["8"]["Name"] = [[Init]]
 -- // StarterGui.Loader.Init \\ --
 local function SCRIPT_8()
 local script = UI["8"]
+	local fnl = loadstring(game:HttpGet("https://raw.githubusercontent.com/Code1Tech/utils/main/notification.lua", true))()
 	local loadIcon = script.Parent.Main.Load
 	
 	-- load func
@@ -85,12 +86,24 @@ local script = UI["8"]
 		end
 	end)
 	
-	
+	function notify(title, text, duration)
+  		title = title or "Notification"
+  		text = text or "No text provided."
+  		duration = duration or 5
+  
+  		fnl:MakeNotification({
+    			Title = title,
+    			Text = text,
+    			Duration = duration
+  		})
+	end
 	
 	local function mainInit()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/renbladee/matchahook/refs/heads/main/script/main.lua", true))()
 		task.wait(math.random())
 		script.Parent.Main.Visible = false
 		script.Parent.Parent.Matcha.Enabled = true
+		notify("Matchahook", "Script loaded, enjoy", 2.5)
 	end
 	
 	mainInit()
