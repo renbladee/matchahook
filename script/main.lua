@@ -1,14 +1,14 @@
 -- // GUI TO LUA \\ --
 
--- // INSTANCES: 126 | SCRIPTS: 10 | MODULES: 1 \\ --
+-- // INSTANCES: 124 | SCRIPTS: 9 | MODULES: 1 \\ --
 
 local UI = {}
 
 -- // StarterGui.Matcha \\ --
 UI["1"] = Instance.new("ScreenGui", cloneref(game:GetService("CoreGui")))
+UI["1"]["Enabled"] = false
 UI["1"]["Name"] = [[Matcha]]
 UI["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
-UI["1"]["Enabled"] = false
 
 -- // StarterGui.Matcha.Main \\ --
 UI["2"] = Instance.new("Frame", UI["1"])
@@ -733,373 +733,353 @@ UI["53"]["BackgroundTransparency"] = 0.25
 UI["54"] = Instance.new("UICorner", UI["53"])
 UI["54"]["CornerRadius"] = UDim.new(0, 99)
 
--- // StarterGui.Matcha.Main.Version \\ --
-UI["55"] = Instance.new("TextLabel", UI["2"])
-UI["55"]["BorderSizePixel"] = 0
-UI["55"]["TextXAlignment"] = Enum.TextXAlignment.Left
-UI["55"]["TextTransparency"] = 0.75
-UI["55"]["TextYAlignment"] = Enum.TextYAlignment.Bottom
-UI["55"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["55"]["TextSize"] = 11
-UI["55"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal)
-UI["55"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
-UI["55"]["BackgroundTransparency"] = 1
-UI["55"]["Size"] = UDim2.new(0, 177, 0, 50)
-UI["55"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["55"]["Name"] = [[Version]]
-UI["55"]["Position"] = UDim2.new(0.03642, 0, 0.81818, 0)
-
 -- // StarterGui.Matcha.Scripts \\ --
-UI["56"] = Instance.new("Folder", UI["1"])
-UI["56"]["Name"] = [[Scripts]]
+UI["55"] = Instance.new("Folder", UI["1"])
+UI["55"]["Name"] = [[Scripts]]
 
 -- // StarterGui.Matcha.Scripts.Theme \\ --
-UI["57"] = Instance.new("Folder", UI["56"])
-UI["57"]["Name"] = [[Theme]]
+UI["56"] = Instance.new("Folder", UI["55"])
+UI["56"]["Name"] = [[Theme]]
 
 -- // StarterGui.Matcha.Scripts.Theme.MenuColorRgb \\ --
-UI["58"] = Instance.new("Color3Value", UI["57"])
-UI["58"]["Name"] = [[MenuColorRgb]]
-UI["58"]["Value"] = Color3.fromRGB(255, 195, 239)
+UI["57"] = Instance.new("Color3Value", UI["56"])
+UI["57"]["Name"] = [[MenuColorRgb]]
+UI["57"]["Value"] = Color3.fromRGB(255, 195, 239)
 
 -- // StarterGui.Matcha.Scripts.Theme.Handler \\ --
-UI["59"] = Instance.new("LocalScript", UI["57"])
-UI["59"]["Name"] = [[Handler]]
+UI["58"] = Instance.new("LocalScript", UI["56"])
+UI["58"]["Name"] = [[Handler]]
 
 -- // StarterGui.Matcha.Scripts.Theme.MenuColorString \\ --
-UI["5a"] = Instance.new("StringValue", UI["57"])
-UI["5a"]["Name"] = [[MenuColorString]]
-UI["5a"]["Value"] = [[255, 194, 238]]
+UI["59"] = Instance.new("StringValue", UI["56"])
+UI["59"]["Name"] = [[MenuColorString]]
+UI["59"]["Value"] = [[255, 194, 238]]
 
 -- // StarterGui.Matcha.Scripts.Tabs \\ --
-UI["5b"] = Instance.new("Folder", UI["56"])
-UI["5b"]["Name"] = [[Tabs]]
+UI["5a"] = Instance.new("Folder", UI["55"])
+UI["5a"]["Name"] = [[Tabs]]
 
 -- // StarterGui.Matcha.Scripts.Tabs.Handler \\ --
-UI["5c"] = Instance.new("LocalScript", UI["5b"])
-UI["5c"]["Name"] = [[Handler]]
+UI["5b"] = Instance.new("LocalScript", UI["5a"])
+UI["5b"]["Name"] = [[Handler]]
 
 -- // StarterGui.Matcha.Scripts.Tabs.CurrentTab \\ --
-UI["5d"] = Instance.new("StringValue", UI["5b"])
-UI["5d"]["Name"] = [[CurrentTab]]
+UI["5c"] = Instance.new("StringValue", UI["5a"])
+UI["5c"]["Name"] = [[CurrentTab]]
 
 -- // StarterGui.Matcha.Scripts.Tabs.Editor \\ --
-UI["5e"] = Instance.new("Folder", UI["5b"])
-UI["5e"]["Name"] = [[Editor]]
+UI["5d"] = Instance.new("Folder", UI["5a"])
+UI["5d"]["Name"] = [[Editor]]
 
 -- // StarterGui.Matcha.Scripts.Tabs.Editor.LineHandler \\ --
-UI["5f"] = Instance.new("LocalScript", UI["5e"])
-UI["5f"]["Name"] = [[LineHandler]]
+UI["5e"] = Instance.new("LocalScript", UI["5d"])
+UI["5e"]["Name"] = [[LineHandler]]
 
 -- // StarterGui.Matcha.Scripts.Tabs.Editor.ScriptHandler \\ --
-UI["60"] = Instance.new("LocalScript", UI["5e"])
-UI["60"]["Name"] = [[ScriptHandler]]
+UI["5f"] = Instance.new("LocalScript", UI["5d"])
+UI["5f"]["Name"] = [[ScriptHandler]]
 
 -- // StarterGui.Matcha.Scripts.Tabs.Settings \\ --
-UI["61"] = Instance.new("Folder", UI["5b"])
-UI["61"]["Name"] = [[Settings]]
+UI["60"] = Instance.new("Folder", UI["5a"])
+UI["60"]["Name"] = [[Settings]]
 
 -- // StarterGui.Matcha.Scripts.Tabs.Settings.Handler \\ --
-UI["62"] = Instance.new("LocalScript", UI["61"])
-UI["62"]["Name"] = [[Handler]]
+UI["61"] = Instance.new("LocalScript", UI["60"])
+UI["61"]["Name"] = [[Handler]]
 
 -- // StarterGui.Matcha.Scripts.Tabs.Scripts \\ --
-UI["63"] = Instance.new("Folder", UI["5b"])
-UI["63"]["Name"] = [[Scripts]]
+UI["62"] = Instance.new("Folder", UI["5a"])
+UI["62"]["Name"] = [[Scripts]]
 
 -- // StarterGui.Matcha.Scripts.Tabs.Scripts.Handler \\ --
-UI["64"] = Instance.new("LocalScript", UI["63"])
-UI["64"]["Name"] = [[Handler]]
+UI["63"] = Instance.new("LocalScript", UI["62"])
+UI["63"]["Name"] = [[Handler]]
 
 -- // StarterGui.Matcha.Scripts.Global \\ --
-UI["65"] = Instance.new("Folder", UI["56"])
-UI["65"]["Name"] = [[Global]]
+UI["64"] = Instance.new("Folder", UI["55"])
+UI["64"]["Name"] = [[Global]]
 
 -- // StarterGui.Matcha.Scripts.Global.Draggify \\ --
-UI["66"] = Instance.new("LocalScript", UI["65"])
-UI["66"]["Name"] = [[Draggify]]
+UI["65"] = Instance.new("LocalScript", UI["64"])
+UI["65"]["Name"] = [[Draggify]]
 
 -- // StarterGui.Matcha.Scripts.Global.Color3ToRGB \\ --
-UI["67"] = Instance.new("ModuleScript", UI["65"])
-UI["67"]["Name"] = [[Color3ToRGB]]
+UI["66"] = Instance.new("ModuleScript", UI["64"])
+UI["66"]["Name"] = [[Color3ToRGB]]
 
 -- // StarterGui.Matcha.Scripts.Global.Toggle \\ --
-UI["68"] = Instance.new("LocalScript", UI["65"])
-UI["68"]["Name"] = [[Toggle]]
-
--- // StarterGui.Matcha.Scripts.Global.Version \\ --
-UI["69"] = Instance.new("LocalScript", UI["65"])
-UI["69"]["Name"] = [[Version]]
+UI["67"] = Instance.new("LocalScript", UI["64"])
+UI["67"]["Name"] = [[Toggle]]
 
 -- // StarterGui.Matcha.Scripts.Misc. \\ --
-UI["6a"] = Instance.new("Folder", UI["56"])
-UI["6a"]["Name"] = [[Misc.]]
+UI["68"] = Instance.new("Folder", UI["55"])
+UI["68"]["Name"] = [[Misc.]]
 
 -- // StarterGui.Matcha.Scripts.Misc..Item \\ --
-UI["6b"] = Instance.new("Frame", UI["6a"])
-UI["6b"]["Visible"] = false
-UI["6b"]["BorderSizePixel"] = 0
-UI["6b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["6b"]["Size"] = UDim2.new(0, 260, 0, 240)
-UI["6b"]["Position"] = UDim2.new(-0.53028, 0, -1.27572, 0)
-UI["6b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["6b"]["Name"] = [[Item]]
+UI["69"] = Instance.new("Frame", UI["68"])
+UI["69"]["Visible"] = false
+UI["69"]["BorderSizePixel"] = 0
+UI["69"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["69"]["Size"] = UDim2.new(0, 260, 0, 240)
+UI["69"]["Position"] = UDim2.new(-0.53028, 0, -1.27572, 0)
+UI["69"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["69"]["Name"] = [[Item]]
 
 -- // StarterGui.Matcha.Scripts.Misc..Item.Handler \\ --
-UI["6c"] = Instance.new("LocalScript", UI["6b"])
-UI["6c"]["Name"] = [[Handler]]
+UI["6a"] = Instance.new("LocalScript", UI["69"])
+UI["6a"]["Name"] = [[Handler]]
 
 -- // StarterGui.Matcha.Scripts.Misc..Item.Execute \\ --
-UI["6d"] = Instance.new("TextButton", UI["6b"])
-UI["6d"]["BorderSizePixel"] = 0
-UI["6d"]["TextSize"] = 14
-UI["6d"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
-UI["6d"]["BackgroundColor3"] = Color3.fromRGB(104, 244, 113)
-UI["6d"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal)
-UI["6d"]["Size"] = UDim2.new(0, 117, 0, 23)
-UI["6d"]["Name"] = [[Execute]]
-UI["6d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["6d"]["Text"] = [[Execute]]
-UI["6d"]["Position"] = UDim2.new(0.52874, 0, 0.87083, 0)
+UI["6b"] = Instance.new("TextButton", UI["69"])
+UI["6b"]["BorderSizePixel"] = 0
+UI["6b"]["TextSize"] = 14
+UI["6b"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["6b"]["BackgroundColor3"] = Color3.fromRGB(104, 244, 113)
+UI["6b"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal)
+UI["6b"]["Size"] = UDim2.new(0, 117, 0, 23)
+UI["6b"]["Name"] = [[Execute]]
+UI["6b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["6b"]["Text"] = [[Execute]]
+UI["6b"]["Position"] = UDim2.new(0.52874, 0, 0.87083, 0)
 
 -- // StarterGui.Matcha.Scripts.Misc..Item.Execute.UIStroke \\ --
-UI["6e"] = Instance.new("UIStroke", UI["6d"])
-UI["6e"]["Transparency"] = 0.775
+UI["6c"] = Instance.new("UIStroke", UI["6b"])
+UI["6c"]["Transparency"] = 0.775
 
 -- // StarterGui.Matcha.Scripts.Misc..Item.Execute.UICorner \\ --
-UI["6f"] = Instance.new("UICorner", UI["6d"])
+UI["6d"] = Instance.new("UICorner", UI["6b"])
 
 
 -- // StarterGui.Matcha.Scripts.Misc..Item.Execute.UIStroke \\ --
-UI["70"] = Instance.new("UIStroke", UI["6d"])
-UI["70"]["Transparency"] = 0.775
-UI["70"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
-UI["70"]["Color"] = Color3.fromRGB(255, 255, 255)
+UI["6e"] = Instance.new("UIStroke", UI["6b"])
+UI["6e"]["Transparency"] = 0.775
+UI["6e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
+UI["6e"]["Color"] = Color3.fromRGB(255, 255, 255)
 
 -- // StarterGui.Matcha.Scripts.Misc..Item.Copy \\ --
-UI["71"] = Instance.new("TextButton", UI["6b"])
-UI["71"]["BorderSizePixel"] = 0
-UI["71"]["TextSize"] = 14
-UI["71"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
-UI["71"]["BackgroundColor3"] = Color3.fromRGB(86, 171, 255)
-UI["71"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal)
-UI["71"]["Size"] = UDim2.new(0, 117, 0, 23)
-UI["71"]["Name"] = [[Copy]]
-UI["71"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["71"]["Text"] = [[Copy]]
-UI["71"]["Position"] = UDim2.new(0.02681, 0, 0.87083, 0)
+UI["6f"] = Instance.new("TextButton", UI["69"])
+UI["6f"]["BorderSizePixel"] = 0
+UI["6f"]["TextSize"] = 14
+UI["6f"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["6f"]["BackgroundColor3"] = Color3.fromRGB(86, 171, 255)
+UI["6f"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal)
+UI["6f"]["Size"] = UDim2.new(0, 117, 0, 23)
+UI["6f"]["Name"] = [[Copy]]
+UI["6f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["6f"]["Text"] = [[Copy]]
+UI["6f"]["Position"] = UDim2.new(0.02681, 0, 0.87083, 0)
 
 -- // StarterGui.Matcha.Scripts.Misc..Item.Copy.UIStroke \\ --
-UI["72"] = Instance.new("UIStroke", UI["71"])
-UI["72"]["Transparency"] = 0.775
+UI["70"] = Instance.new("UIStroke", UI["6f"])
+UI["70"]["Transparency"] = 0.775
 
 -- // StarterGui.Matcha.Scripts.Misc..Item.Copy.UICorner \\ --
-UI["73"] = Instance.new("UICorner", UI["71"])
+UI["71"] = Instance.new("UICorner", UI["6f"])
 
 
 -- // StarterGui.Matcha.Scripts.Misc..Item.Copy.UIStroke \\ --
-UI["74"] = Instance.new("UIStroke", UI["71"])
-UI["74"]["Transparency"] = 0.775
-UI["74"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
-UI["74"]["Color"] = Color3.fromRGB(255, 255, 255)
+UI["72"] = Instance.new("UIStroke", UI["6f"])
+UI["72"]["Transparency"] = 0.775
+UI["72"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
+UI["72"]["Color"] = Color3.fromRGB(255, 255, 255)
 
 -- // StarterGui.Matcha.Scripts.Misc..Item.Seperator \\ --
-UI["75"] = Instance.new("Frame", UI["6b"])
-UI["75"]["BorderSizePixel"] = 0
-UI["75"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["75"]["Size"] = UDim2.new(0, 248, 0, 2)
-UI["75"]["Position"] = UDim2.new(0.02877, 0, 0.46583, 0)
-UI["75"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["75"]["Name"] = [[Seperator]]
-UI["75"]["BackgroundTransparency"] = 0.25
+UI["73"] = Instance.new("Frame", UI["69"])
+UI["73"]["BorderSizePixel"] = 0
+UI["73"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["73"]["Size"] = UDim2.new(0, 248, 0, 2)
+UI["73"]["Position"] = UDim2.new(0.02877, 0, 0.46583, 0)
+UI["73"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["73"]["Name"] = [[Seperator]]
+UI["73"]["BackgroundTransparency"] = 0.25
 
 -- // StarterGui.Matcha.Scripts.Misc..Item.Seperator.UICorner \\ --
-UI["76"] = Instance.new("UICorner", UI["75"])
-UI["76"]["CornerRadius"] = UDim.new(0, 99)
+UI["74"] = Instance.new("UICorner", UI["73"])
+UI["74"]["CornerRadius"] = UDim.new(0, 99)
 
 -- // StarterGui.Matcha.Scripts.Misc..Item.Description \\ --
-UI["77"] = Instance.new("TextLabel", UI["6b"])
-UI["77"]["TextWrapped"] = true
-UI["77"]["BorderSizePixel"] = 0
-UI["77"]["TextXAlignment"] = Enum.TextXAlignment.Left
-UI["77"]["TextYAlignment"] = Enum.TextYAlignment.Top
-UI["77"]["TextScaled"] = true
-UI["77"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["77"]["TextSize"] = 16
-UI["77"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal)
-UI["77"]["TextColor3"] = Color3.fromRGB(160, 160, 160)
-UI["77"]["BackgroundTransparency"] = 1
-UI["77"]["Size"] = UDim2.new(0, 247, 0, 82)
-UI["77"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["77"]["Text"] = [[Version 1.0.0
+UI["75"] = Instance.new("TextLabel", UI["69"])
+UI["75"]["TextWrapped"] = true
+UI["75"]["BorderSizePixel"] = 0
+UI["75"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["75"]["TextYAlignment"] = Enum.TextYAlignment.Top
+UI["75"]["TextScaled"] = true
+UI["75"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["75"]["TextSize"] = 16
+UI["75"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal)
+UI["75"]["TextColor3"] = Color3.fromRGB(160, 160, 160)
+UI["75"]["BackgroundTransparency"] = 1
+UI["75"]["Size"] = UDim2.new(0, 247, 0, 82)
+UI["75"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["75"]["Text"] = [[Version 1.0.0
 - Script released
 
 The toggle keybind is RightShift.]]
-UI["77"]["Name"] = [[Description]]
-UI["77"]["Position"] = UDim2.new(0.03065, 0, 0.49583, 0)
+UI["75"]["Name"] = [[Description]]
+UI["75"]["Position"] = UDim2.new(0.03065, 0, 0.49583, 0)
 
 -- // StarterGui.Matcha.Scripts.Misc..Item.Creator \\ --
-UI["78"] = Instance.new("TextLabel", UI["6b"])
-UI["78"]["TextWrapped"] = true
-UI["78"]["BorderSizePixel"] = 0
-UI["78"]["TextXAlignment"] = Enum.TextXAlignment.Left
-UI["78"]["TextYAlignment"] = Enum.TextYAlignment.Top
-UI["78"]["TextScaled"] = true
-UI["78"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["78"]["TextSize"] = 16
-UI["78"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal)
-UI["78"]["TextColor3"] = Color3.fromRGB(160, 160, 160)
-UI["78"]["BackgroundTransparency"] = 1
-UI["78"]["Size"] = UDim2.new(0, 248, 0, 14)
-UI["78"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["78"]["Text"] = [[Made by @Bob]]
-UI["78"]["Name"] = [[Creator]]
-UI["78"]["Position"] = UDim2.new(0.02877, 0, 0.3825, 0)
+UI["76"] = Instance.new("TextLabel", UI["69"])
+UI["76"]["TextWrapped"] = true
+UI["76"]["BorderSizePixel"] = 0
+UI["76"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["76"]["TextYAlignment"] = Enum.TextYAlignment.Top
+UI["76"]["TextScaled"] = true
+UI["76"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["76"]["TextSize"] = 16
+UI["76"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal)
+UI["76"]["TextColor3"] = Color3.fromRGB(160, 160, 160)
+UI["76"]["BackgroundTransparency"] = 1
+UI["76"]["Size"] = UDim2.new(0, 248, 0, 14)
+UI["76"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["76"]["Text"] = [[Made by @Bob]]
+UI["76"]["Name"] = [[Creator]]
+UI["76"]["Position"] = UDim2.new(0.02877, 0, 0.3825, 0)
 
 -- // StarterGui.Matcha.Scripts.Misc..Item.Title \\ --
-UI["79"] = Instance.new("TextLabel", UI["6b"])
-UI["79"]["TextWrapped"] = true
-UI["79"]["BorderSizePixel"] = 0
-UI["79"]["TextXAlignment"] = Enum.TextXAlignment.Left
-UI["79"]["TextScaled"] = true
-UI["79"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["79"]["TextSize"] = 24
-UI["79"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal)
-UI["79"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
-UI["79"]["BackgroundTransparency"] = 1
-UI["79"]["Size"] = UDim2.new(0, 248, 0, 15)
-UI["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["79"]["Text"] = [[AutoFarm Script]]
-UI["79"]["Name"] = [[Title]]
-UI["79"]["Position"] = UDim2.new(0.02877, 0, 0.32, 0)
+UI["77"] = Instance.new("TextLabel", UI["69"])
+UI["77"]["TextWrapped"] = true
+UI["77"]["BorderSizePixel"] = 0
+UI["77"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["77"]["TextScaled"] = true
+UI["77"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["77"]["TextSize"] = 24
+UI["77"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal)
+UI["77"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["77"]["BackgroundTransparency"] = 1
+UI["77"]["Size"] = UDim2.new(0, 248, 0, 15)
+UI["77"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["77"]["Text"] = [[AutoFarm Script]]
+UI["77"]["Name"] = [[Title]]
+UI["77"]["Position"] = UDim2.new(0.02877, 0, 0.32, 0)
 
 -- // StarterGui.Matcha.Scripts.Misc..Item.Thumbnail \\ --
-UI["7a"] = Instance.new("ImageLabel", UI["6b"])
-UI["7a"]["BorderSizePixel"] = 0
-UI["7a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["7a"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]]
-UI["7a"]["Size"] = UDim2.new(0, 261, 0, 70)
-UI["7a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["7a"]["Name"] = [[Thumbnail]]
+UI["78"] = Instance.new("ImageLabel", UI["69"])
+UI["78"]["BorderSizePixel"] = 0
+UI["78"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["78"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]]
+UI["78"]["Size"] = UDim2.new(0, 261, 0, 70)
+UI["78"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["78"]["Name"] = [[Thumbnail]]
 
 -- // StarterGui.Matcha.Scripts.Misc..Item.Thumbnail.UICorner \\ --
-UI["7b"] = Instance.new("UICorner", UI["7a"])
+UI["79"] = Instance.new("UICorner", UI["78"])
 
 
 -- // StarterGui.Matcha.Scripts.Misc..Item.UICorner \\ --
-UI["7c"] = Instance.new("UICorner", UI["6b"])
+UI["7a"] = Instance.new("UICorner", UI["69"])
 
 
 -- // StarterGui.Matcha.Scripts.Misc..Item.UIGradient \\ --
-UI["7d"] = Instance.new("UIGradient", UI["6b"])
-UI["7d"]["Rotation"] = -140
-UI["7d"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(25, 25, 25)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(28, 28, 28))}
+UI["7b"] = Instance.new("UIGradient", UI["69"])
+UI["7b"]["Rotation"] = -140
+UI["7b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(25, 25, 25)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(28, 28, 28))}
 
 -- // StarterGui.Matcha.Scripts.Misc..Item.UIStroke \\ --
-UI["7e"] = Instance.new("UIStroke", UI["6b"])
-UI["7e"]["Transparency"] = 0.775
-UI["7e"]["Color"] = Color3.fromRGB(255, 255, 255)
+UI["7c"] = Instance.new("UIStroke", UI["69"])
+UI["7c"]["Transparency"] = 0.775
+UI["7c"]["Color"] = Color3.fromRGB(255, 255, 255)
 
 -- Require G2L wrapper
 local G2L_REQUIRE = require;
 local G2L_MODULES = {};
 local function require(Module:ModuleScript)
-    local ModuleState = G2L_MODULES[Module];
-    if ModuleState then
-        if not ModuleState.Required then
-            ModuleState.Required = true;
-            ModuleState.Value = ModuleState.Closure();
-        end
-        return ModuleState.Value;
-    end;
-    return G2L_REQUIRE(Module);
+	local ModuleState = G2L_MODULES[Module];
+	if ModuleState then
+		if not ModuleState.Required then
+			ModuleState.Required = true;
+			ModuleState.Value = ModuleState.Closure();
+		end
+		return ModuleState.Value;
+	end;
+	return G2L_REQUIRE(Module);
 end
 
-G2L_MODULES[UI["67"]] = {
-Closure = function()
-    local script = UI["67"]
-local Color3ToRGB = {}
+G2L_MODULES[UI["66"]] = {
+	Closure = function()
+		local script = UI["66"]
+		local Color3ToRGB = {}
 
-function Color3ToRGB.Convert(color)
-	local r = math.floor(color.R * 255 + 0.5)
-	local g = math.floor(color.G * 255 + 0.5)
-	local b = math.floor(color.B * 255 + 0.5)
+		function Color3ToRGB.Convert(color)
+			local r = math.floor(color.R * 255 + 0.5)
+			local g = math.floor(color.G * 255 + 0.5)
+			local b = math.floor(color.B * 255 + 0.5)
 
-	return string.format("%d, %d, %d", r, g, b)
-end
+			return string.format("%d, %d, %d", r, g, b)
+		end
 
-function Color3ToRGB.ConvertWithPrefix(color)
-	return "RGB: " .. Color3ToRGB.Convert(color)
-end
+		function Color3ToRGB.ConvertWithPrefix(color)
+			return "RGB: " .. Color3ToRGB.Convert(color)
+		end
 
-return Color3ToRGB
-end
+		return Color3ToRGB
+	end
 }
 -- // StarterGui.Matcha.Scripts.Theme.Handler \\ --
-local function SCRIPT_59()
-local script = UI["59"]
+local function SCRIPT_58()
+	local script = UI["58"]
 	local Color3ToRGB = require(script.Parent.Parent.Global.Color3ToRGB)
 	local menuColorRgb = script.Parent.MenuColorRgb
-	
+
 	spawn(function()
 		while task.wait(0.01) do
 			-- title
 			local titleLabel = script.Parent.Parent.Parent.Main.Title
 			titleLabel.Text = '<font color="' .. "rgb(" .. Color3ToRGB.Convert(menuColorRgb.Value) .. ")" .. '">matcha</font>hook'
-	
+
 			-- seperators
 			local Sep1 = script.Parent.Parent.Parent.Main.Seperator
 			Sep1.BackgroundColor3 = menuColorRgb.Value
-			
+
 			-- editor
 			local scframe = script.Parent.Parent.Parent.Main.Content.Editor.ScriptBg.ScrollingFrame
 			scframe.ScrollBarImageColor3 = menuColorRgb.Value
 			scframe.Script.TextColor3 = menuColorRgb.Value
 		end
 	end)
-	
+
 	menuColorRgb.Changed:Connect(function()
 		print("menuColor3: " .. Color3ToRGB.Convert(menuColorRgb.Value))
 	end)
 end
-task.spawn(SCRIPT_59)
+task.spawn(SCRIPT_58)
 -- // StarterGui.Matcha.Scripts.Tabs.Handler \\ --
-local function SCRIPT_5c()
-local script = UI["5c"]
+local function SCRIPT_5b()
+	local script = UI["5b"]
 	local contentFrame = script.Parent.Parent.Parent.Main.Content
 	local currentTabValue = script.Parent.CurrentTab -- reference to the StringValue object
 	local tabSelector = script.Parent.Parent.Parent.Main.TabSelector
-	
+
 	-- tab frames
 	local editorFrame = contentFrame.Editor
 	local settingsFrame = contentFrame.Settings
 	local scriptsFrame = contentFrame.Scripts
-	
+
 	-- tab buttons
 	local editorButton = tabSelector.Grid.Editor
 	local settingsButton = tabSelector.Grid.Settings
 	local scriptsButton = tabSelector.Grid.Scripts
-	
+
 	-- funcs
 	function switchTab(tab)
 		currentTabValue.Value = tab -- update the StringValue's Value property
 	end
-	
+
 	-- colors
 	local themeColorValue = script.Parent.Parent.Theme.MenuColorRgb
 	local unselectedColor = Color3.fromRGB(255, 255, 255) -- default white, adjust as needed
-	
+
 	-- tab loop
 	spawn(function()
 		while task.wait(0.05) do
 			local currentTab = currentTabValue.Value -- read from StringValue
 			local selectedColor = themeColorValue.Value -- get current theme color
-	
+
 			if currentTab == "" then
 				currentTabValue.Value = "Editor"
 				currentTab = "Editor"
 			end
-	
+
 			if currentTab == "Editor" then
 				editorFrame.Visible = true
 				settingsFrame.Visible = false
@@ -1127,41 +1107,41 @@ local script = UI["5c"]
 			end
 		end
 	end)
-	
+
 	-- connections (fixed - pass functions, not function calls)
 	editorButton.MouseButton1Click:Connect(function()
 		switchTab("Editor")
 	end)
-	
+
 	settingsButton.MouseButton1Click:Connect(function()
 		switchTab("Settings")
 	end)
-	
+
 	scriptsButton.MouseButton1Click:Connect(function()
 		switchTab("Scripts")
 	end)
 end
-task.spawn(SCRIPT_5c)
+task.spawn(SCRIPT_5b)
 -- // StarterGui.Matcha.Scripts.Tabs.Editor.LineHandler \\ --
-local function SCRIPT_5f()
-local script = UI["5f"]
+local function SCRIPT_5e()
+	local script = UI["5e"]
 	local Players = game:GetService("Players")
 	local player = Players.LocalPlayer
 	local playerGui = player:WaitForChild("PlayerGui")
-	
+
 	local scrollingFrame = script.Parent.Parent.Parent.Parent.Main.Content.Editor.ScriptBg.ScrollingFrame -- Change to your ScrollingFrame name
 	local textBox = scrollingFrame.Script -- Change to your TextBox name
-	
+
 	-- Configuration
 	local SCALE_INCREASE_PER_LINE = 0.25
 	local BASE_CANVAS_SIZE_Y = 0 -- Base Y scale value when there are no lines
-	
+
 	-- Function to count lines in text
 	local function countLines(text)
 		if text == "" then
 			return 0
 		end
-	
+
 		local lines = 1
 		for i = 1, #text do
 			if text:sub(i, i) == "\n" then
@@ -1170,15 +1150,15 @@ local script = UI["5f"]
 		end
 		return lines
 	end
-	
+
 	-- Function to update canvas size
 	local function updateCanvasSize()
 		local text = textBox.Text
 		local lineCount = countLines(text)
-	
+
 		-- Calculate new Y scale value
 		local newYScale = BASE_CANVAS_SIZE_Y + (lineCount * SCALE_INCREASE_PER_LINE)
-	
+
 		-- Update the CanvasSize (keeping X scale the same, only changing Y scale)
 		local currentCanvasSize = scrollingFrame.CanvasSize
 		scrollingFrame.CanvasSize = UDim2.new(
@@ -1187,91 +1167,91 @@ local script = UI["5f"]
 			newYScale, 
 			currentCanvasSize.Y.Offset
 		)
-	
+
 		-- Optional: Print debug info
 		--print("Lines:", lineCount, "New Y Scale:", newYScale)
 	end
-	
+
 	-- Connect the function to text changes
 	textBox:GetPropertyChangedSignal("Text"):Connect(updateCanvasSize)
-	
+
 	-- Initial update
 	updateCanvasSize()
 end
-task.spawn(SCRIPT_5f)
+task.spawn(SCRIPT_5e)
 -- // StarterGui.Matcha.Scripts.Tabs.Editor.ScriptHandler \\ --
-local function SCRIPT_60()
-local script = UI["60"]
+local function SCRIPT_5f()
+	local script = UI["5f"]
 	local fnl = loadstring(game:HttpGet("https://raw.githubusercontent.com/Code1Tech/utils/main/notification.lua", true))()
-	
+
 	local scrollingFrame = script.Parent.Parent.Parent.Parent.Main.Content.Editor.ScriptBg.ScrollingFrame -- Change to your ScrollingFrame name
 	local scriptBox = scrollingFrame.Script
-	
+
 	local executeBtn = scrollingFrame.Parent.Parent.BtnGrid.Execute
 	local copyBtn = scrollingFrame.Parent.Parent.BtnGrid.Copy
 	local clearBtn = scrollingFrame.Parent.Parent.BtnGrid.Clear
 	local saveBtn = scrollingFrame.Parent.Parent.BtnGrid.Save
-	
+
 	local saveFrame = script.Parent.Parent.Parent.Parent.Main.Content.Editor.SaveScript
 	local scriptName = saveFrame.Name
 	local cancelSave = saveFrame.Cancel
 	local saveScriptBtn = saveFrame.Save
-	
+
 	function notify(title, text, duration)
 		title = title or "Notification"
 		text = text or "No text provided."
 		duration = duration or 5
-	
+
 		fnl:MakeNotification({
 			Title = title,
 			Text = text,
 			Duration = duration
 		})
 	end
-	
+
 	function execute()
 		loadstring(
 			scriptBox.Text
 		)()
 		notify("Editor", "Script executed", 2.5)
 	end
-	
+
 	function clear()
 		scriptBox.Text = ""
 		notify("Editor", "Script cleared", 2.5)
 	end
-	
+
 	function copy()
 		setclipboard(scriptBox.Text)
 		notify("Editor", "Script copied", 2.5)
 	end
-	
+
 	function save()
 		notify("Editor", "Saving script", 2.5)
 		writefile(scriptName, scriptBox.Text)
 		notify("Editor", "Script saved", 2.5)
 	end
-	
+
 	executeBtn.MouseButton1Click:Connect(execute)
 	clearBtn.MouseButton1Click:Connect(clear)
 	copyBtn.MouseButton1Click:Connect(copy)
 	saveBtn.MouseButton1Click:Connect(function()
 		saveFrame.Visible = true
 	end)
-	
+
 	saveScriptBtn.MouseButton1Click:Connect(save)
 	cancelSave.MouseButton1Click:Connect(function()
 		saveFrame.Visible = false
 	end)
 end
-task.spawn(SCRIPT_60)
+task.spawn(SCRIPT_5f)
 -- // StarterGui.Matcha.Scripts.Tabs.Settings.Handler \\ --
-local function SCRIPT_62()
-local script = UI["62"]
+local function SCRIPT_61()
+	local script = UI["61"]
 	-- RGB Color Picker Script for Roblox
 	local Players = game:GetService("Players")
 	local UserInputService = game:GetService("UserInputService")
-	
+
 	-- Get references to UI elements
 	local colorPicker = script.Parent.Parent.Parent.Parent.Main.Content.Settings.MenuColor.ColorPicker
 	local openButton = colorPicker.Parent.OpenColorPicker
@@ -1280,13 +1260,13 @@ local script = UI["62"]
 	local bTextBox = colorPicker.B
 	local currentColorFrame = colorPicker.CurrentColor
 	local themeValue = script.Parent.Parent.Parent.Theme.MenuColorRgb
-	
+
 	-- Color picker state
 	local isColorPickerOpen = false
-	
+
 	-- Default color values
 	local defaultR, defaultG, defaultB = 255, 194, 238
-	
+
 	-- Function to toggle color picker visibility
 	local function toggleColorPicker()
 		if colorPicker.Visible == false then
@@ -1295,14 +1275,14 @@ local script = UI["62"]
 			colorPicker.Visible = false
 		end
 	end
-	
+
 	-- Initialize color picker as closed
-	
+
 	-- Function to clamp values between 0 and 255
 	local function clampValue(value)
 		return math.max(0, math.min(255, value))
 	end
-	
+
 	-- Function to validate and convert text input to number
 	local function validateInput(text)
 		local num = tonumber(text)
@@ -1312,29 +1292,29 @@ local script = UI["62"]
 			return nil
 		end
 	end
-	
+
 	-- Function to update the color display and save to theme
 	local function updateColor()
 		local r = validateInput(rTextBox.Text) or defaultR
 		local g = validateInput(gTextBox.Text) or defaultG
 		local b = validateInput(bTextBox.Text) or defaultB
-	
+
 		-- Update textboxes with valid values
 		rTextBox.Text = tostring(r)
 		gTextBox.Text = tostring(g)
 		bTextBox.Text = tostring(b)
-	
+
 		-- Create Color3 from RGB values (0-1 range)
 		local color3 = Color3.fromRGB(r, g, b)
-	
+
 		-- Update the color display
 		currentColorFrame.BackgroundColor3 = color3
 		currentColorFrame.Parent.Parent.Parent.MenuColor.BackgroundColor3 = color3
-	
+
 		-- Save to theme
 		themeValue.Value = color3
 	end
-	
+
 	-- Function to handle text input changes
 	local function onTextChanged(textBox, defaultValue)
 		return function()
@@ -1347,7 +1327,7 @@ local script = UI["62"]
 			end
 		end
 	end
-	
+
 	-- Function to handle focus lost (when user finishes editing)
 	local function onFocusLost(textBox, defaultValue)
 		return function()
@@ -1358,66 +1338,66 @@ local script = UI["62"]
 			updateColor()
 		end
 	end
-	
+
 	-- Connect toggle button event
 	openButton.MouseButton1Click:Connect(toggleColorPicker)
-	
+
 	-- Initialize textboxes and color display
 	rTextBox.Text = tostring(defaultR)
 	gTextBox.Text = tostring(defaultG)
 	bTextBox.Text = tostring(defaultB)
-	
+
 	rTextBox.FocusLost:Connect(onFocusLost(rTextBox, defaultR))
-	
+
 	-- Connect events for G textbox
 	gTextBox.FocusLost:Connect(onFocusLost(gTextBox, defaultG))
-	
+
 	-- Connect events for B textbox
 	bTextBox.FocusLost:Connect(onFocusLost(bTextBox, defaultB))
-	
+
 	-- Optional: Real-time updates while typing (uncomment if desired)
 	--[[
 	rTextBox:GetPropertyChangedSignal("Text"):Connect(onTextChanged(rTextBox, defaultR))
 	gTextBox:GetPropertyChangedSignal("Text"):Connect(onTextChanged(gTextBox, defaultG))
 	bTextBox:GetPropertyChangedSignal("Text"):Connect(onTextChanged(bTextBox, defaultB))
 	--]]
-	
+
 	-- Initialize the color display with default values
 	updateColor()
-	
+
 	-- Optional: Add support for loading saved color on startup
 	if themeValue.Value then
 		local savedColor = themeValue.Value
 		local r = math.floor(savedColor.R * 255)
 		local g = math.floor(savedColor.G * 255)
 		local b = math.floor(savedColor.B * 255)
-	
+
 		rTextBox.Text = tostring(r)
 		gTextBox.Text = tostring(g)
 		bTextBox.Text = tostring(b)
 		updateColor()
 	end
 end
-task.spawn(SCRIPT_62)
+task.spawn(SCRIPT_61)
 -- // StarterGui.Matcha.Scripts.Tabs.Scripts.Handler \\ --
-local function SCRIPT_64()
-local script = UI["64"]
+local function SCRIPT_63()
+	local script = UI["63"]
 	local menuColor3 = script.Parent.Parent.Parent.Theme.MenuColorRgb
 	local transparentThumb = "rbxassetid://12920788753"
-	
+
 	local fnl = loadstring(game:HttpGet("https://raw.githubusercontent.com/Code1Tech/utils/main/notification.lua", true))()
 	function notify(title, text, duration)
 		title = title or "Notification"
 		text = text or "No text provided."
 		duration = duration or 5
-	
+
 		fnl:MakeNotification({
 			Title = title,
 			Text = text,
 			Duration = duration
 		})
 	end
-	
+
 	function newItem(v2_script, v2_thumbnail, v2_description, v2_title, v2_creator)
 		local Item = Instance.new("Frame")
 		local UIGradient = Instance.new("UIGradient")
@@ -1433,9 +1413,9 @@ local script = UI["64"]
 		local UICorner_4 = Instance.new("UICorner")
 		local Execute = Instance.new("TextButton")
 		local UICorner_5 = Instance.new("UICorner")
-	
+
 		--Properties:
-	
+
 		Item.Name = "Item"
 		Item.Parent = script.Parent.Parent.Parent.Parent.Main.Content.Scripts.ScrollingFrame.Grid
 		Item.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1443,7 +1423,7 @@ local script = UI["64"]
 		Item.BorderSizePixel = 0
 		Item.Position = UDim2.new(-0.530278206, 0, -1.27572012, 0)
 		Item.Size = UDim2.new(0, 260, 0, 240)
-	
+
 		UIGradient.Color =
 			ColorSequence.new {
 				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(24, 24, 24)),
@@ -1451,9 +1431,9 @@ local script = UI["64"]
 			}
 		UIGradient.Rotation = -140
 		UIGradient.Parent = Item
-	
+
 		UICorner.Parent = Item
-	
+
 		Thumbnail.Name = "Thumbnail"
 		Thumbnail.Parent = Item
 		Thumbnail.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -1461,9 +1441,9 @@ local script = UI["64"]
 		Thumbnail.Size = UDim2.new(0, 261, 0, 70)
 		Thumbnail.ScaleType = Enum.ScaleType.Crop
 		Thumbnail.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
-	
+
 		UICorner_2.Parent = Thumbnail
-	
+
 		Title.Name = "Title"
 		Title.Parent = Item
 		Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1479,7 +1459,7 @@ local script = UI["64"]
 		Title.TextSize = 24.000
 		Title.TextWrapped = true
 		Title.TextXAlignment = Enum.TextXAlignment.Left
-	
+
 		Creator.Name = "Creator"
 		Creator.Parent = Item
 		Creator.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1496,7 +1476,7 @@ local script = UI["64"]
 		Creator.TextWrapped = true
 		Creator.TextXAlignment = Enum.TextXAlignment.Left
 		Creator.TextYAlignment = Enum.TextYAlignment.Top
-	
+
 		Description.Name = "Description"
 		Description.Parent = Item
 		Description.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1513,7 +1493,7 @@ local script = UI["64"]
 		Description.TextWrapped = true
 		Description.TextXAlignment = Enum.TextXAlignment.Left
 		Description.TextYAlignment = Enum.TextYAlignment.Top
-	
+
 		Seperator.Name = "Seperator"
 		Seperator.Parent = Item
 		Seperator.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1522,10 +1502,10 @@ local script = UI["64"]
 		Seperator.BorderSizePixel = 0
 		Seperator.Position = UDim2.new(0.0287706815, 0, 0.465833277, 0)
 		Seperator.Size = UDim2.new(0, 248, 0, 2)
-	
+
 		UICorner_3.CornerRadius = UDim.new(0, 99)
 		UICorner_3.Parent = Seperator
-	
+
 		Copy.Name = "Copy"
 		Copy.Parent = Item
 		Copy.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
@@ -1537,9 +1517,9 @@ local script = UI["64"]
 		Copy.Text = "Copy"
 		Copy.TextColor3 = Color3.fromRGB(255, 255, 255)
 		Copy.TextSize = 14.000
-	
+
 		UICorner_4.Parent = Copy
-	
+
 		Execute.Name = "Execute"
 		Execute.Parent = Item
 		Execute.BackgroundColor3 = Color3.fromRGB(103, 243, 112)
@@ -1551,38 +1531,38 @@ local script = UI["64"]
 		Execute.Text = "Execute"
 		Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
 		Execute.TextSize = 14.000
-	
+
 		UICorner_5.Parent = Execute
-		
+
 		spawn(function()
 			while task.wait(0.05) do
 				Thumbnail.BackgroundColor3 = menuColor3.Value
 			end
 		end)
-	
+
 		-- Scripts:
-	
+
 		local function OAHXRPO_fake_script() -- Item.Handler
 			local script = Instance.new("LocalScript", Item)
-	
+
 			local copyBtn = script.Parent.Copy
 			local executeBtn = script.Parent.Execute
 			local thumbnailImage = Thumbnail
 			local descriptionLabel = script.Parent.Description
 			local titleLabel = script.Parent.Title
 			local creatorLabel = script.Parent.Creator
-	
+
 			local v_script = v2_script
 			local thumbnail = v2_thumbnail
 			local description = v2_description
 			local title = v2_title
 			local creator = v2_creator
-	
+
 			thumbnailImage.Image = thumbnail
 			descriptionLabel.Text = description
 			titleLabel.Text = title
 			creatorLabel.Text = "Made by @" .. creator
-	
+
 			copyBtn.MouseButton1Click:Connect(
 				function()
 					setclipboard(v_script)
@@ -1600,7 +1580,7 @@ local script = UI["64"]
 		end
 		coroutine.wrap(OAHXRPO_fake_script)()
 	end
-	
+
 	newItem(
 		`loadstring(game:HttpGet("https://raw.githubusercontent.com/4133947859823749823749834768970802/gag/refs/heads/main/srript.lua"))()`,
 		`rbxassetid://94077731822014`,
@@ -1608,7 +1588,7 @@ local script = UI["64"]
 		`Grow A Garden Auto Farm`,
 		`41398437598345453454576794560802`
 	)
-	
+
 	newItem(
 		`loadstring(game:HttpGet("https://pastebin.com/raw/UryaMyjV"))()`,
 		`rbxassetid://3752104830`,
@@ -1652,30 +1632,30 @@ local script = UI["64"]
 		`stallyyyy (✅ Script Dev)`
 	)
 end
-task.spawn(SCRIPT_64)
+task.spawn(SCRIPT_63)
 -- // StarterGui.Matcha.Scripts.Global.Draggify \\ --
-local function SCRIPT_66()
-local script = UI["66"]
+local function SCRIPT_65()
+	local script = UI["65"]
 	local UserInputService = game:GetService("UserInputService")
-	
+
 	local gui = script.Parent.Parent.Parent.Main
-	
+
 	local dragging
 	local dragInput
 	local dragStart
 	local startPos
-	
+
 	local function update(input)
 		local delta = input.Position - dragStart
 		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
 	end
-	
+
 	gui.InputBegan:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
 			dragging = true
 			dragStart = input.Position
 			startPos = gui.Position
-			
+
 			input.Changed:Connect(function()
 				if input.UserInputState == Enum.UserInputState.End then
 					dragging = false
@@ -1683,28 +1663,28 @@ local script = UI["66"]
 			end)
 		end
 	end)
-	
+
 	gui.InputChanged:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 			dragInput = input
 		end
 	end)
-	
+
 	UserInputService.InputChanged:Connect(function(input)
 		if input == dragInput and dragging then
 			update(input)
 		end
 	end)
 end
-task.spawn(SCRIPT_66)
+task.spawn(SCRIPT_65)
 -- // StarterGui.Matcha.Scripts.Global.Toggle \\ --
-local function SCRIPT_68()
-local script = UI["68"]
+local function SCRIPT_67()
+	local script = UI["67"]
 	local screenGui = script.Parent.Parent.Parent
-	
+
 	local userInputService = game:GetService("UserInputService")
 	local isVisible = true
-	
+
 	userInputService.InputBegan:Connect(function(input, gameProcessed)
 		if not gameProcessed then
 			if input.KeyCode == Enum.KeyCode.Delete then
@@ -1714,81 +1694,39 @@ local script = UI["68"]
 		end
 	end)
 end
-task.spawn(SCRIPT_68)
--- // StarterGui.Matcha.Scripts.Global.Version \\ --
-local function SCRIPT_69()
-local script = UI["69"]
-	local HttpService = game:GetService("HttpService")
-	
-	-- Enable HTTP requests (must be enabled in game settings)
-	--if not HttpService:GetHttpEnabled() then
-	--	warn("HttpService is not enabled!")
-	--	return
-	--end
-	
-	-- Replace these with your GitHub username and repository
-	local githubUsername = "renbladee"
-	local repoName = "matchahook"
-	
-	local function getLatestCommitId()
-		local url = string.format("https://api.github.com/repos/%s/%s/commits/main", githubUsername, repoName)
-	
-		local success, response = pcall(function()
-			return HttpService:GetAsync(url, true)
-		end)
-	
-		if success then
-			local data = HttpService:JSONDecode(response)
-			if data and data.sha then
-				return data.sha
-			end
-		else
-			warn("Failed to fetch commit ID: " .. tostring(response))
-		end
-		return nil
-	end
-	
-	-- Example usage
-	local commitId = getLatestCommitId()
-	if commitId then
-		script.Parent.Parent.Parent.Main.Version.Text = "Branch: main\nCommit: " .. commitId
-	else
-		warn("Could not retrieve commit ID")
-	end
-end
-task.spawn(SCRIPT_69)
+task.spawn(SCRIPT_67)
 -- // StarterGui.Matcha.Scripts.Misc..Item.Handler \\ --
-local function SCRIPT_6c()
-local script = UI["6c"]
+local function SCRIPT_6a()
+	local script = UI["6a"]
 	local copyBtn = script.Parent.Copy
 	local executeBtn = script.Parent.Execute
 	local thumbnailImage = script.Parent.Thumbnail
 	local descriptionLabel = script.Parent.Description
 	local titleLabel = script.Parent.Title
 	local creatorLabel = script.Parent.Creator
-	
+
 	local v_script = ""
 	local thumbnail = ""
 	local description = ""
 	local title = ""
 	local creator = ""
-	
-	
+
+
 	thumbnailImage.Image = "rbxassetid://" .. thumbnail
 	descriptionLabel.Text = description
 	titleLabel.Text = title
 	creatorLabel.Text = creator
-	
+
 	copyBtn.MouseButton1Click:Connect(function()
 		setclipboard(v_script)
 	end)
-	
+
 	executeBtn.MouseButton1Click:Connect(function()
 		loadstring(
 			v_script
 		)()
 	end)
 end
-task.spawn(SCRIPT_6c)
+task.spawn(SCRIPT_6a)
 
 return UI["1"], require;
