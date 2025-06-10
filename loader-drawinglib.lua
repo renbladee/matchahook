@@ -1,6 +1,6 @@
 local UI = {}
 
-UI["1"] = Drawing.new("ScreenGui", cloneref(game:GetService("CoreGui")))
+UI["1"] = Drawing.new("ScreenGui", game:GetService("CoreGui"))
 UI["1"]["Name"] = [[Loader]]
 UI["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
 
