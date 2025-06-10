@@ -8,6 +8,7 @@ local UI = {}
 UI["1"] = Instance.new("ScreenGui", cloneref(game:GetService("CoreGui")))
 UI["1"]["Name"] = [[Matcha]]
 UI["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
+UI["1"]["Enabled"] = false
 
 -- // StarterGui.Matcha.Main \\ --
 UI["2"] = Instance.new("Frame", UI["1"])
