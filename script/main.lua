@@ -5,7 +5,7 @@
 local UI = {}
 
 -- // StarterGui.Matcha \\ --
-UI["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"))
+UI["1"] = Instance.new("ScreenGui", cloneref(game:GetService("CoreGui")))
 UI["1"]["Name"] = [[Matcha]]
 UI["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
 
